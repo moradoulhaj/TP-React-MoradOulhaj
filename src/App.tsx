@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Catalogue from './components/Catalogue';
 import ProductDetails from './components/ProductDetails';
