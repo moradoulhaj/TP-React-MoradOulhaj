@@ -1,6 +1,6 @@
 # 🛒 React Product Catalogue App
 
-**Live Demo**: [https://moradoulhaj.github.io/tp-react-moradoulhaj](https://moradoulhaj.github.io/tp-react-moradoulhaj)
+**Live Demo**: [[https://moradoulhaj.github.io/tp-react-moradoulhaj](https://moradoulhaj.github.io/TP-React-MoradOulhaj/login)]([https://moradoulhaj.github.io/tp-react-moradoulhaj](https://moradoulhaj.github.io/TP-React-MoradOulhaj/login))
 
 A responsive e-commerce frontend built with **React + TypeScript**, styled with **Tailwind CSS**, featuring search, category filters, product detail views, login authentication, and checkout — powered by [Fake Store API](https://fakestoreapi.com/). Hosted on **GitHub Pages**.
 
