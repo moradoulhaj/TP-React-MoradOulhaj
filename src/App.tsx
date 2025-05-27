@@ -8,7 +8,7 @@ import Checkout from './components/Checkout';
 
 function App() {
   return (
-    <Router>
+    <Router  basename="/TP-React-MoradOulhaj">
       <Routes>
         <Route path="/" element={<Catalogue />} />
         <Route path="/product/:id" element={<ProductDetails />} />
