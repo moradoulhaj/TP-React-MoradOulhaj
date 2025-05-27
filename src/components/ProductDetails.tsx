@@ -48,7 +48,6 @@ const ProductDetails: React.FC = () => {
             ⭐ {product.rating.rate} | {product.rating.count} reviews
           </p>
           <p className="mt-4">{product.description}</p>
-          // Replace the old button
           <button
             onClick={handleProceedToCheckout}
             className="mt-6 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
