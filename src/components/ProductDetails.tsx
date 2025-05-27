@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 
 type ProductType = {
   id: number;
@@ -14,21 +14,27 @@ type ProductType = {
   };
 };
 
+
 const ProductDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<ProductType | null>(null);
-
+  const navigate = useNavigate();
+  const handleProceedToCheckout = () => {
+    navigate('/login');
+  };
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
-      .then(res => res.json())
-      .then(data => setProduct(data));
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
   }, [id]);
 
   if (!product) return <p className="text-center mt-10">Loading...</p>;
 
   return (
     <div className="p-6 max-w-4xl mx-auto bg-white rounded shadow">
-      <Link to="/" className="text-blue-500 underline mb-4 inline-block">← Back to Catalogue</Link>
+      <Link to="/" className="text-blue-500 underline mb-4 inline-block">
+        ← Back to Catalogue
+      </Link>
       <div className="flex flex-col md:flex-row gap-6">
         <img
           src={product.image}
@@ -38,9 +44,15 @@ const ProductDetails: React.FC = () => {
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold">{product.title}</h1>
           <p className="text-gray-600">${product.price}</p>
-          <p className="text-sm text-gray-500">⭐ {product.rating.rate} | {product.rating.count} reviews</p>
+          <p className="text-sm text-gray-500">
+            ⭐ {product.rating.rate} | {product.rating.count} reviews
+          </p>
           <p className="mt-4">{product.description}</p>
-          <button className="mt-6 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
+          // Replace the old button
+          <button
+            onClick={handleProceedToCheckout}
+            className="mt-6 bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
+          >
             Proceed to Checkout
           </button>
         </div>
