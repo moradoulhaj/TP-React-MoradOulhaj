@@ -29,7 +29,7 @@ A responsive e-commerce frontend built with **React + TypeScript**, styled with 
 
 ## 📸 Screenshots
 
-> Place screenshots in a `screens/` folder and reference them like below:
+
 
 - **Catalogue Page**  
   ![Catalogue](screenshots/1.png)
